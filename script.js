@@ -55,13 +55,13 @@ let humanWonCount=0,computerWonCount=0;
 function playGame(num)
 {
     for(let i=1;i<=num;i++)
-    {
-        if(playRound()==1)
+    { let winnerRound=playRound()
+        if(winnerRound)
         {
             console.log(`Round number ${i} is won by user`);
             humanWonCount++;
         }
-        else if(playRound()==0){
+        else if(winnerRound==0){
             console.log(`Round number ${i} is won by computer`);
             computerWonCount++;
         }
